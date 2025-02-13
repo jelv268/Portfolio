@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // Start cycling images only in the rotating gallery
-        setInterval(rotateGallery, 5000); // Change image every 5 seconds
+        setInterval(rotateGallery, 4000); // Change image every 5 seconds
     }
 
     // Smooth scroll for navigation links
