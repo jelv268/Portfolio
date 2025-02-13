@@ -2,17 +2,29 @@
 :root {
     --color-bg: #0A192F;
     --color-bg-secondary: #112240;
-    --color-primary: #64FFDA;
+    --color-primary: #FF5722; /* Change from #64FFDA to #FF5722 */
     --color-text: #CCD6F6;
     --color-text-secondary: #8892B0;
     --color-blueprint: #147EFB;
-    --font-mono: 'IBM Plex Mono', monospace;
-    --font-sans: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace; /* Already correct */
+    --font-sans: 'JetBrains Mono', monospace; /* Change from 'Inter' to 'JetBrains Mono' */
     --grid-size: 40px;
 }
 
 /* Import fonts */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap');
+@font-face {
+    font-family: var(--font-mono);
+    src: url('/fonts/JetBrainsMono-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: var(--font-mono);
+    src: url('/fonts/JetBrainsMono-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
 
 /* Blueprint Grid Background */
 body {
@@ -22,7 +34,7 @@ body {
         linear-gradient(90deg, rgba(20, 126, 251, 0.05) 1px, transparent 1px);
     background-size: var(--grid-size) var(--grid-size);
     color: var(--color-text);
-    font-family: var(--font-sans);
+    font-family: var(--font-mono);
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -32,7 +44,7 @@ body {
 .navbar {
     background: rgba(10, 25, 47, 0.95);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+    border-bottom: 1px solid rgba(255, 87, 34, 0.1);
     padding: 1rem 2rem;
     position: fixed;
     width: 100%;
@@ -92,7 +104,7 @@ body {
     font-size: 4rem;
     margin: 0;
     color: var(--color-primary);
-    text-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+    text-shadow: 0 0 10px rgba(255, 87, 34, 0.3);
 }
 
 .hero-content h2 {
@@ -116,8 +128,8 @@ body {
     display: flex;
     flex-direction: column;
     background: var(--color-bg-secondary);
-    border: 1px solid rgba(100, 255, 218, 0.1);
-    border-radius: 4px;
+    border: 1px solid rgba(255, 87, 34, 0.1);
+    border-radius: 0px;
     overflow: hidden;
     transition: all 0.3s ease;
 }
@@ -127,10 +139,10 @@ body {
 }
 
 .project-tags span {
-    background: rgba(100, 255, 218, 0.1);
+    background: rgba(255, 87, 34, 0.1);
     color: var(--color-primary);
     padding: 0.25rem 0.75rem;
-    border-radius: 2px;
+    border-radius: 0px;
     font-family: var(--font-mono);
     font-size: 0.8rem;
 }
@@ -195,7 +207,7 @@ body {
 }
 
 .cta-button:hover {
-    background: rgba(100, 255, 218, 0.1);
+    background: rgba(255, 87, 34, 0.1);
 }
 
 .hero {
@@ -211,8 +223,8 @@ body {
     height: 400px;
     width: 100%;
     overflow: hidden;
-    border-radius: 4px;
-    border: 1px solid rgba(100, 255, 218, 0.1);
+    border-radius: 0px;
+    border: 1px solid rgba(255, 87, 34, 0.1);
 }
 
 .gallery-image {
@@ -276,4 +288,194 @@ body {
     .mobile-menu-btn {
         display: block;
     }
+}
+
+/* Content Container */
+.content-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: var(--color-bg-secondary);
+    border: 1px solid rgba(255, 87, 34, 0.1);
+    border-radius: 0px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* About Section Updates */
+.about {
+    padding: 4rem 2rem;
+}
+
+.about h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--color-primary);
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.about-text {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--color-bg-secondary);
+    padding: 2rem;
+    border: 1px solid rgba(255, 87, 34, 0.1);
+    border-radius: 0px;
+}
+
+.about-text p {
+    text-align: justify;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+/* Project Detail Page Updates */
+.project-detail {
+    padding: 6rem 2rem 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.project-header h1 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.project-description {
+    max-width: 800px;
+    margin: 3rem auto;
+    background: var(--color-bg-secondary);
+    padding: 2rem;
+    border: 1px solid rgba(255, 87, 34, 0.1);
+    border-radius: 0px;
+}
+
+.project-description section {
+    margin-bottom: 2rem;
+}
+
+.project-description h2 {
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+}
+
+.project-description p {
+    text-align: justify;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .content-container,
+    .about-text,
+    .project-description {
+        padding: 1.5rem;
+    }
+    
+    .project-detail {
+        padding: 5rem 1rem 2rem 1rem;
+    }
+}
+
+/* Center the Projects heading */
+.projects h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--color-primary);
+    padding-top: 4rem;
+}
+
+/* Style the clickable links */
+.project-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-content h3 {
+    color: var(--color-primary);
+    transition: color 0.3s ease;
+}
+
+.project-content a:hover h3 {
+    color: var(--color-text);
+}
+
+/* Remove the original view details link */
+.project-link {
+    display: none;
+}
+
+/* Make image look clickable on hover */
+.project-image {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.project-image:hover {
+    opacity: 0.8;
+}
+
+/* Contact Section Styling */
+.contact {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.contact h2 {
+    color: var(--color-primary);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-content p {
+    font-size: 1.2rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 2rem;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.2rem;
+    color: var(--color-text);
+}
+
+.contact-item i {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+}
+
+.contact-item a {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-item a:hover {
+    color: var(--color-primary);
+}
+
+/* Fix scroll offset for sections */
+.projects {
+    padding-top: 6rem; /* Adjust based on navbar height */
+    margin-top: -6rem; /* Counteracts padding for correct spacing */
 }
