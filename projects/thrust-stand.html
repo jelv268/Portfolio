@@ -23,8 +23,8 @@
         <header class="project-header">
             <h1>Drone Propeller Thrust Stand</h1>
             <div class="project-tags">
-                <span>CAD</span>
-                <span>Arduino</span>
+                <span>Testing</span>
+                <span>Robotics</span>
                 <span>Data Analysis</span>
                 <span>3D Printing</span>
             </div>
@@ -85,26 +85,38 @@
         <div class="project-description">
             <section>
                 <h2>Overview</h2>
-                <p>Detailed description of the project...</p>
+                <p>Building reliable drone propulsion starts with rigorous testing. I developed a thrust stand for a drone delivery startup to validate yaw thruster performance. The thrusters operate inside ducts, generating bidirectional thrust. The system automates endurance, thermal, and vibration testing—delivering high-fidelity data to improve performance and durability.</p>
             </section>
 
             <section>
                 <h2>Technical Details</h2>
                 <ul>
-                    <li>Specification 1</li>
-                    <li>Specification 2</li>
-                    <!-- Add more specifications -->
+                    <li><strong>Systems:</strong> 6DOF load cell, rotary encoder, accelerometers, thermocouple.</li>
+                    <li><strong>Propulsion:</strong> BLDC motor with injection-molded propellers inside ducts.</li>
+                    <li><strong>Testing Scope:</strong> Torque profiling, endurance, thermal, vibration analysis.</li>
+                    <li><strong>Data Collection:</strong> Python-based test app for automated logging.</li>
+                    <li><strong>Manufacturing:</strong> CNC-machined aluminum hub, SLS 3D-printed aero surfaces.</li>
+                    <li><strong>Simulation & Optimization:</strong> CFD, FEA, failure criteria definition.</li>
                 </ul>
             </section>
 
             <section>
                 <h2>Development Process</h2>
-                <p>Description of how you built it...</p>
+                <ol>
+                    <li><strong>Concept & Design:</strong> Modeled complex aerodynamic surfaces in Siemens NX, ensuring realistic flow behavior over the ducts.</li>
+                    <li><strong>Prototype & Fabrication:</strong> Built the stand from machined aluminum and steel. Used 3D printing to validate airflows before finalizing injection-molded propellers.</li>
+                    <li><strong>Testing & Data Analysis:</strong> Integrated a motor controller, load cell, and encoders to collect torque and thrust data. Wind tunnel tests refined performance.</li>
+                    <li><strong>Optimization & Refinement:</strong> Defined failure criteria and optimized thruster efficiency through CFD, FEA, and vibration testing.</li>
+                </ol>
             </section>
 
             <section>
                 <h2>Results</h2>
-                <p>What you achieved...</p>
+                <ul>
+                    <li><strong>Reliable Testing Platform - </strong> Enabled automated, repeatable tests for thrust and endurance validation.</li>
+                    <li><strong>Enhanced Performance Insights - </strong> Data-driven improvements in thrust efficiency, duct geometry, and motor performance.</li>
+                    <li><strong>Manufacturing-Ready Design - </strong> Designed for DFM/DFA, ensuring smooth transition from prototype to production.</li>
+                </ul>
             </section>
         </div>
     </main>

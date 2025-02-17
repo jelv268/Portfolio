@@ -72,3 +72,23 @@
     height: auto;
     object-fit: contain;
 }
+
+.document-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.document-list li {
+    margin-bottom: 8px;
+}
+
+.document-list a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #0073e6;
+}
+
+.document-list a:hover {
+    text-decoration: underline;
+    color: #004a99;
+}
